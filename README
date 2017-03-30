@@ -1,0 +1,20 @@
+Google cloud platform had recently shut down the Python 2.5 support, so AppInventor TinyWebDB code should be updated.
+The only changes are:
+
+app.yalm:
+Change
+  runtime: python
+  to
+  runtime: python27
+
+Add threadsafe: false
+
+Delete:
+  application: customtinywebdb
+  version: 1
+
+main.py:
+Replace
+  from django.utils import simplejson as json
+  with
+  import json
